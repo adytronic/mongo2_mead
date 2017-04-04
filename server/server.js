@@ -1,3 +1,5 @@
+require('./config/config.js');
+
 const _ = require('lodash');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -92,7 +94,7 @@ app.patch('/todos/:id', (req, res) => {
 
 
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT; // 3000 ahora lo hace config.js
 
 app.listen(port, () => {
     console.log('Listening on port ' + port);
